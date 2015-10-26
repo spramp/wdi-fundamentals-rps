@@ -22,20 +22,17 @@ function randomPlay() {
 ////////////////////////////////////////////////
 
 function getPlayerMove(move) {
-	console.log(“Please select a move.”)
-	return prompt();
+	if (move = null) {
+		return getInput();
+	}
 }
 
 function getComputerMove(move) {
-	var randomNumber = Math.random();
-	if (randomNumber < 0.33) {
-		return “rock”;
-} elseif (randomNumber < 0.66) {
-		return “paper”;
-} else {
-		return “scissors”;
+	if (move = null) {
+		return randomPlay();
 	}
 }
+
 
 function getWinner(playerMove,computerMove) {
     var winner;
